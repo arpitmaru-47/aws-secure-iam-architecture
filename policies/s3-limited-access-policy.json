@@ -1,1 +1,27 @@
 
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowListingBucketNames",
+      "Effect": "Allow",
+      "Action": "s3:ListAllMyBuckets",
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowBucketListing",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::devops-iam-lab-2026-unique"
+    },
+    {
+      "Sid": "AllowObjectReadWrite",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::devops-iam-lab-2026-unique/*"
+    }
+  ]
+}
